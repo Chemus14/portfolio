@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width" />
         <title>Jose Maria Jimenez Garcia</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/script.js" defer></script>
     </head>
 
     <!--Body-->
@@ -13,15 +14,11 @@
         
         <!--Navbar-->
         <div class="Navbar">
-            <a class="active" href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a class="active nav" href="#Home">Home</a>
+            <a class="nav"href="#About">About</a>
+            <a class="nav"href="#GitHub">GitHub</a>
+            <a class="nav contact"href="#Contact">Contact</a>
         </div>
-
-        <!--Breaks inserted to add space between navbar and the first heading-->
-        <br>
-        <br>
 
         <!--Background video-->
         <div id="Home">
@@ -48,6 +45,25 @@
             </strong>
         </div>
 
+        <div class="image-slideshow">
+
+            <div class="image fade">
+                <img class="slide" src="imgs/slides/react.png" alt="Mountain Top">
+                <div class="slide-text">React frontend, nice interface with nice components</div>
+            </div>
+              
+            <div class="image fade">
+                <img class="slide" src="imgs/slides/bootstrap.png" alt="Palm Trees">
+                <div class="slide-text">Make all your app responsives</div>
+            </div>
+              
+            <div class="image fade">
+                <img class="slide" src="imgs/slides/htmljscss.png" alt="Neon Sign">
+                <div class="slide-text">Develop your app from scratch</div>
+            </div>
+            <div class="dots-container"></div>
+        </div>
+        
         <!--About section-->
         <div class="Row" id="About">
             <!--Left column-->
@@ -63,7 +79,7 @@
                     <br>
                     <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
                     <br>
-                    <br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                    <br>I am a full-stack developer and would love to work with you on your project. <a class="contact" href="#Contact">Contact</a> me below!
                 </p>
             </div>
         </div>
@@ -77,13 +93,13 @@
                     You can view my coding projects on my GitHub profile here:
                     <br>
                     <p class="center">
-                        <a href="https://github.com/Chemus14/HTML-and-CSS-Projects" target="_blank">Visit my Github</a>
+                        <a href="https://github.com/Chemus14" target="_blank">Visit my Github</a>
                     </p>
                 </p>
             </div>
             <!--Right column-->
             <div class="Column_2">
-                <a href="https://github.com/the-tech-academy" target="_blank">
+                <a href="https://github.com/Chemus14" target="_blank">
                     <img src="imgs/GitHub.png" alt="GitHub Logo">
                 </a>
             </div>
@@ -91,30 +107,31 @@
 
         <!--Contact section-->
         <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="imgs/contact.jpg" alt="Contact_Image">
-            </div>
+
             <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
+            
+                <button class="contactBtn contact">Contact Me</button>
                 <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                <form id="contact-me" action="https://formspree.io/f/xoqzyqgk" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
                     <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
+                        <input type="text" name="Name" placeholder="Please enter your name here" required >
                     <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here" required>
                     <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here" required>
+                        <div class="message"></div>
+                        <input class="submit" type="submit" value="SUBMIT">
+                        <input class="close" type="button" value="CLOSE">
                 </form>
-            </div>
+            
         </div>
 
         <!--Footer section-->
         <footer>
 
-                <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
+                <p class="center">&copy Jose Maria Jimenez Garcia., 
+                    <a href="https://github.com/Chemus14/HTML-and-CSS-Projects" target="_blank">Jose's Github</a>
+                </p>
                 <br>
 
         </footer>
